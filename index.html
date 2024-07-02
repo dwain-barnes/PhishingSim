@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Email Phishing Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>Email Phishing Challenge</h1>
+        </header>
+        <main>
+            <div id="placeholder-container">
+                <img src="placeholder-image.jpg" alt="Email Security" id="placeholder-image">
+                <div id="difficulty-selector">
+                    <label for="difficulty">Select Difficulty: </label>
+                    <select id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                    <button id="start-game">Start Game</button>
+                </div>
+            </div>
+            <div id="email-client" class="hidden">
+                <div id="email-list" aria-label="Email list">
+                    <!-- Emails will be populated here by JavaScript -->
+                </div>
+                <div id="email-content" aria-live="polite">
+                    <!-- Selected email content will be displayed here -->
+                </div>
+            </div>
+            <div id="challenge-controls" class="hidden">
+                <button id="identify-phishing">Identify as Phishing</button>
+                <button id="mark-safe">Mark as Safe</button>
+            </div>
+            <div id="score-display" class="hidden">
+                Score: <span id="score">0</span>
+            </div>
+            <div id="timer-display" class="hidden">
+                Time Remaining: <span id="timer">30</span> seconds
+            </div>
+        </main>
+    </div>
+    <div id="feedback-modal" class="hidden" aria-modal="true">
+        <h2 id="feedback-title"></h2>
+        <p id="feedback-content"></p>
+        <div class="learning-resources">
+            <h3>Learning Resources:</h3>
+            <ul id="learning-resources-list"></ul>
+        </div>
+        <button id="next-email">Next Email</button>
+    </div>
+    <div id="final-score-modal" class="hidden" aria-modal="true">
+        <h2>Game Over!</h2>
+        <p>Your final score: <span id="final-score"></span></p>
+        <p>Correct answers: <span id="correct-answers"></span></p>
+        <p>Incorrect answers: <span id="incorrect-answers"></span></p>
+        <button id="play-again">Play Again</button>
+    </div>
+
+    <script src="emails.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
